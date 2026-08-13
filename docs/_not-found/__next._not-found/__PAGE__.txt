@@ -1,0 +1,45 @@
+1:"$Sreact.fragment"
+2:I[5014,["/adv_gsc/_next/static/chunks/2npi_rpr4qbfm.js"],"default"]
+3:I[22016,["/adv_gsc/_next/static/chunks/2npi_rpr4qbfm.js"],""]
+4:I[97367,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+a:I[97367,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+8:X
+24:X
+24:C
+0:{"buildId":"2FzpWB3i8fU1G2u-xC2wg","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-surface","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-8 flex flex-col items-center py-24 text-center sm:py-32","children":[["$","svg",null,{"width":"120","height":"64","viewBox":"0 0 120 64","aria-hidden":"true","children":[["$","path",null,{"d":"M10 62 A 50 50 0 0 1 110 62","fill":"none","stroke":"var(--color-brand)","strokeWidth":"2.5","strokeLinecap":"round"}],["$","path",null,{"d":"M34 62 A 26 26 0 0 1 86 62","fill":"none","stroke":"var(--color-mist)","strokeWidth":"1.5","strokeLinecap":"round"}]]}],["$","h1",null,{"className":"text-display text-graphite mt-6","children":"Página não encontrada"}],["$","p",null,{"className":"text-corpo text-text-muted mt-4 max-w-md","children":"O endereço que você digitou não existe ou mudou de lugar. O caminho de volta é simples."}],["$","div",null,{"className":"mt-8 flex flex-col gap-3 sm:flex-row","children":[["$","a",null,{"href":"/","className":"group/btn relative inline-flex min-h-12 cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full px-6 py-3 text-corpo font-semibold transition-[background-color,color,border-color,box-shadow,translate] duration-200 ease-arco hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.985] motion-reduce:hover:translate-y-0 bg-graphite text-ice shadow-botao hover:bg-graphite-hover hover:shadow-botao-hover","children":[["$","span",null,{"aria-hidden":"true","className":"btn-brilho"}],"$undefined",["$","span",null,{"className":"relative","children":"Voltar para o início"}],["$","$L2",null,{"iconNode":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]],"className":"lucide-arrow-right ease-arco relative size-4 shrink-0 transition-transform duration-200 group-hover/btn:translate-x-1 motion-reduce:transition-none","strokeWidth":2.2,"aria-hidden":true}]]}],["$","a",null,{"href":"https://wa.me/5524992166665?text=Ol%C3%A1%2C%20vim%20pelo%20site.%20O%20INSS%20negou%20meu%20benef%C3%ADcio%20e%20preciso%20de%20ajuda.","className":"group/btn relative inline-flex min-h-12 cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full px-6 py-3 text-corpo font-semibold transition-[background-color,color,border-color,box-shadow,translate] duration-200 ease-arco hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.985] motion-reduce:hover:translate-y-0 border border-petrol/50 bg-transparent text-graphite hover:border-graphite hover:bg-brand-50","data-wa-context":"404","target":"_blank","rel":"noopener noreferrer","children":[false,"$undefined",["$","span",null,{"className":"relative","children":"Falar no WhatsApp"}],["$","$L2",null,{"iconNode":"$0:data:0:rsc:props:children:0:props:children:props:children:3:props:children:0:props:children:3:props:iconNode","className":"lucide-arrow-right ease-arco relative size-4 shrink-0 transition-transform duration-200 group-hover/btn:translate-x-1 motion-reduce:transition-none","strokeWidth":2.2,"aria-hidden":true}]]}]]}],["$","p",null,{"className":"text-legenda text-text-muted mt-10","children":["Procurando uma área específica?"," ",["$","$L3",null,{"href":"/#areas","className":"underline underline-offset-4","children":"Veja as áreas de atuação"}],"."]}]]}]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"GSC Advocacia — O INSS negou? A negativa não é a palavra final"}],["$","meta","1",{"name":"description","content":"Escritório de advocacia previdenciária. Ações contra o INSS: salário-maternidade, BPC/LOAS, aposentadorias e auxílios. Atendimento 100% online para todo o Brasil."}],["$","meta","2",{"name":"robots","content":"index, follow"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f"]}]}]}],"$L20"]}],"isPartial":"$@21","staleTime":"$8","varyParams":null},{"rsc":"$L22","isPartial":"$@23","staleTime":"$8","varyParams":"$24"}],"isUpgradeableISRFallback":false,"a":"$@25","rootVaryParams":null,"needsRuntimeRequest":"$@26"}
+27:I[27201,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"IconMark"]
+28:I[39756,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"default"]
+29:I[37457,["/adv_gsc/_next/static/chunks/3fntmmi971322.js"],"default"]
+6:null
+b:["$","link","3",{"rel":"canonical","href":"https://www.gsc.adv.br/"}]
+c:["$","meta","4",{"property":"og:title","content":"GSC Advocacia — Aposentadorias e Benefícios do INSS"}]
+d:["$","meta","5",{"property":"og:description","content":"Escritório de advocacia previdenciária. Ações contra o INSS: salário-maternidade, BPC/LOAS, aposentadorias e auxílios. Atendimento 100% online para todo o Brasil."}]
+e:["$","meta","6",{"property":"og:site_name","content":"GSC Advocacia"}]
+f:["$","meta","7",{"property":"og:locale","content":"pt_BR"}]
+10:["$","meta","8",{"property":"og:image","content":"https://www.gsc.adv.br/opengraph-image?699d1bc7bf5f5024"}]
+11:["$","meta","9",{"property":"og:image:type","content":"image/png"}]
+12:["$","meta","10",{"property":"og:image:width","content":"1200"}]
+13:["$","meta","11",{"property":"og:image:height","content":"630"}]
+14:["$","meta","12",{"property":"og:image:alt","content":"GSC Advocacia — Aposentadorias e Benefícios do INSS"}]
+15:["$","meta","13",{"property":"og:type","content":"website"}]
+16:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+17:["$","meta","15",{"name":"twitter:title","content":"GSC Advocacia — Aposentadorias e Benefícios do INSS"}]
+18:["$","meta","16",{"name":"twitter:description","content":"Escritório de advocacia previdenciária. Ações contra o INSS: salário-maternidade, BPC/LOAS, aposentadorias e auxílios. Atendimento 100% online para todo o Brasil."}]
+19:["$","meta","17",{"name":"twitter:image","content":"https://www.gsc.adv.br/opengraph-image?699d1bc7bf5f5024"}]
+1a:["$","meta","18",{"name":"twitter:image:alt","content":"GSC Advocacia — Aposentadorias e Benefícios do INSS"}]
+1b:["$","meta","19",{"name":"twitter:image:type","content":"image/png"}]
+1c:["$","meta","20",{"name":"twitter:image:width","content":"1200"}]
+1d:["$","meta","21",{"name":"twitter:image:height","content":"630"}]
+1e:["$","link","22",{"rel":"icon","href":"/adv_gsc/icon.svg?icon.0_g9ypblfwr1o.svg","sizes":"any","type":"image/svg+xml"}]
+1f:["$","$L27","23",{}]
+20:["$","meta",null,{"name":"next-size-adjust","content":""}]
+22:["$","$1","c",{"children":[null,["$","$L28",null,{"parallelRouterKey":"children","template":["$","$L29",null,{}]}]]}]
+26:true
+8:300
+8:C
+25:0
+21:"$undefined"
+23:"$undefined"
+7:"$undefined"
