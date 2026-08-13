@@ -57,6 +57,28 @@ nativos do navegador.
 Trocar o número de WhatsApp = editar **um** campo em `site.ts`. As mensagens
 pré-preenchidas de cada botão estão em `src/lib/whatsapp.ts`.
 
+## Prévia para o cliente (GitHub Pages)
+
+**https://abalduinojose-cmd.github.io/adv_gsc/**
+
+Publicada da pasta `docs/` do repositório
+[abalduinojose-cmd/adv_gsc](https://github.com/abalduinojose-cmd/adv_gsc), branch `main`.
+Para atualizar depois de qualquer alteração:
+
+```bash
+npm run build:pages
+git add -A && git commit -m "atualiza prévia" && git push
+```
+
+O Pages leva 1 a 2 minutos para republicar. Detalhes do processo:
+
+- `build:pages` gera um export estático com `basePath=/adv_gsc`, imagens sem
+  otimização sob demanda (o Pages não tem servidor) e grava `.nojekyll` — sem ele
+  o Jekyll ignora a pasta `_next/` e o site sobe sem CSS nem JS.
+- `docs/` **não** pode entrar no `.gitignore`: é a pasta publicada.
+- É só prévia. Em produção (Vercel) o site roda completo, com otimização de
+  imagem e sem o subcaminho `/adv_gsc`.
+
 ## Variáveis de ambiente
 
 Copie `.env.example` para `.env.local`:
