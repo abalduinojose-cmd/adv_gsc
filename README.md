@@ -133,3 +133,4 @@ Ilhas com JavaScript (`"use client"`): menu mobile, botão flutuante, consentime
 o observador de fades e a fachada dos vídeos. Todo o resto é estático — CTAs são links
 reais, o FAQ usa `<details>` nativo e os carrosséis do mobile são scroll-snap puro
 (funcionam sem JavaScript).
+
