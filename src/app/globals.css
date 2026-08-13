@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+/* =============================================================================
+   GSC ADVOCACIA — design system
+   Paleta da marca + tokens semânticos. Componentes NUNCA usam hex cru:
+   sempre bg-surface, text-text, border-borda etc.
+   ========================================================================== */
+
+@theme {
+  /* Desliga a roda de cores padrão do Tailwind: só a família da marca existe. */
+  --color-*: initial;
+
+  /* --- Paleta da marca (obrigatória) --- */
+  --color-brand: #82a2af; /* superfícies, arcos, ícones decorativos — nunca texto pequeno */
+  --color-ice: #f7ffff;
+  --color-petrol: #587783; /* bordas, texto secundário (4,78:1 sobre ice) */
+  --color-mist: #aebfc5;
+  --color-graphite: #34464d; /* texto institucional e superfícies escuras */
+
+  /* --- Derivadas (mesma família, sem cores inventadas) --- */
+  --color-graphite-hover: #263539;
+  --color-graphite-deep: #2b3b42; /* superfície escura alternativa */
+  --color-petrol-deep: #4a6570; /* texto muted sobre fundos tintados (≥ 4,5:1) */
+  --color-brand-50: #eef4f6; /* fundo suave */
+  --color-brand-100: #dfeaee; /* fundo suave mais presente */
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  /* --- Tokens semânticos --- */
+  --color-surface: var(--color-ice);
+  --color-surface-alt: var(--color-brand-50);
+  --color-surface-dark: var(--color-graphite);
+  --color-text: var(--color-graphite);
+  --color-text-muted: var(--color-petrol-deep);
+  --color-text-inverse: var(--color-ice);
+  --color-borda: #c6d3d9;
+  --color-whatsapp: #25d366; /* APENAS no ícone do botão flutuante */
+
+  /* --- Tipografia --- */
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-texto: var(--font-public-sans), system-ui, -apple-system, sans-serif;
+
+  /* Escala fluida */
+  --text-display: clamp(2.125rem, 1.35rem + 3.4vw, 4rem); /* H1: 34 → 64px */
+  --text-display--line-height: 1.08;
+  --text-titulo: clamp(1.65rem, 1.25rem + 1.8vw, 2.6rem); /* H2 */
+  --text-titulo--line-height: 1.12;
+  --text-entre: clamp(1.2rem, 1.05rem + 0.7vw, 1.55rem); /* H3 */
+  --text-entre--line-height: 1.25;
+  --text-corpo: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem); /* 17 → 18px */
+  --text-corpo--line-height: 1.65;
+  --text-legenda: 0.9375rem;
+  --text-legenda--line-height: 1.5;
+
+  /* --- Assinatura: raio assimétrico que ecoa o arco do monograma --- */
+  --radius-arco: 2.75rem;
+  --radius-suave: 1rem;
+
+  /* --- Movimento --- */
+  --ease-arco: cubic-bezier(0.33, 1, 0.68, 1);
+
+  /* --- Sombras: difusas e frias, da mesma família --- */
+  --shadow-card: 0 1px 2px rgb(52 70 77 / 0.05), 0 12px 32px -12px rgb(52 70 77 / 0.14);
+  --shadow-flutuante: 0 4px 12px rgb(38 53 57 / 0.18), 0 16px 40px -12px rgb(38 53 57 / 0.28);
+  --shadow-botao: 0 1px 2px rgb(38 53 57 / 0.16), 0 8px 20px -10px rgb(38 53 57 / 0.4);
+  --shadow-botao-hover: 0 2px 6px rgb(38 53 57 / 0.2), 0 16px 32px -12px rgb(38 53 57 / 0.5);
+}
+
+/* ============================================================================
+   Base
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* âncoras não somem sob o header fixo */
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-texto);
+  font-size: var(--text-corpo);
+  line-height: var(--text-corpo--line-height);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-ice);
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 2px solid var(--color-petrol);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Alvo de toque confortável nos controles */
+a,
+button,
+summary {
+  touch-action: manipulation;
+}
+
+/* ============================================================================
+   Assinatura da marca
+   ========================================================================== */
+
+/* Canto de arco: um canto muito arredondado, os demais discretos */
+.canto-arco {
+  border-radius: var(--radius-arco) var(--radius-suave) var(--radius-suave) var(--radius-suave);
+}
+.canto-arco-inverso {
+  border-radius: var(--radius-suave) var(--radius-arco) var(--radius-suave) var(--radius-suave);
+}
+
+/* Janela em arco: máscara de foto que ecoa o monograma */
+.janela-arco {
+  border-radius: calc(infinity * 1px) calc(infinity * 1px) var(--radius-suave) var(--radius-suave);
+}
+
+/* O arco do hero desenha-se uma única vez (~700ms) — o único momento
+   coreografado da página. */
+@keyframes desenhar-arco {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.arco-desenha {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: desenhar-arco 0.7s var(--ease-arco) 0.2s forwards;
+}
+
+/* ============================================================================
+   Hero com vídeo: véus que garantem contraste do texto sobre a cena
+   ========================================================================== */
+
+/* Desktop: escurece a diagonal esquerda, onde o texto vive. */
+.veu-hero-desktop {
+  background:
+    linear-gradient(
+      100deg,
+      rgb(23 33 37 / 0.92) 0%,
+      rgb(23 33 37 / 0.74) 34%,
+      rgb(23 33 37 / 0.34) 64%,
+      rgb(23 33 37 / 0.12) 100%
+    ),
+    linear-gradient(0deg, rgb(23 33 37 / 0.35) 0%, transparent 45%);
+}
+
+/* Mobile: o texto fica na base, então o escuro sobe de baixo. */
+.veu-hero-mobile {
+  background: linear-gradient(
+    180deg,
+    rgb(23 33 37 / 0.62) 0%,
+    rgb(23 33 37 / 0.42) 34%,
+    rgb(23 33 37 / 0.88) 100%
+  );
+}
+
+/* O vídeo chega depois da imagem e entra num fade sobre a mesma cena. */
+@keyframes video-entra {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.video-hero-entra {
+  animation: video-entra 0.7s var(--ease-arco) both;
+}
+
+/* O vídeo do hero roda sempre (pedido da cliente), inclusive com
+   "reduzir movimento" ligado — só a entrada em fade é dispensada. */
+
+/* Rotas do mapa: desenham-se uma vez, escalonadas. */
+.rota {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: desenhar-arco 1.1s var(--ease-arco) forwards;
+}
+
+/* Halo do pino de Petrópolis: respiração lenta, quase imperceptível. */
+@keyframes pino-respira {
+  0%,
+  100% {
+    r: 9;
+    opacity: 0.3;
+  }
+  50% {
+    r: 12;
+    opacity: 0.08;
+  }
+}
+.pino-halo {
+  animation: pino-respira 3.6s var(--ease-arco) infinite;
+}
+
+/* Brilho diagonal que atravessa o botão primário no hover. */
+.btn-brilho {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 35%,
+    rgb(255 255 255 / 0.16) 50%,
+    transparent 65%
+  );
+  translate: -110% 0;
+  transition: translate 0.65s var(--ease-arco);
+}
+.group\/btn:hover .btn-brilho {
+  translate: 110% 0;
+}
+
+/* ============================================================================
+   Trilho arrastável (mobile): scroll-snap nativo, sem JavaScript
+   ========================================================================== */
+
+/* Em @layer components para que utilitários responsivos (sm:grid, sm:mx-0…)
+   consigam sobrescrever no desktop. */
+@layer components {
+  .trilho {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+    padding-inline: 1.25rem;
+    margin-inline: -1.25rem;
+    padding-bottom: 0.5rem;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trilho::-webkit-scrollbar {
+    display: none;
+  }
+  .trilho > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}
+
+/* ============================================================================
+   Revelação no scroll (fades sutis; JS apenas adiciona a classe)
+   ========================================================================== */
+
+html[data-anima] [data-reveal] {
+  opacity: 0;
+  translate: 0 14px;
+  transition:
+    opacity 0.55s var(--ease-arco),
+    translate 0.55s var(--ease-arco);
+}
+html[data-anima] [data-reveal].revelado {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ============================================================================
+   Mural de depoimentos — colunas verticais em deslize lento (desktop)
+   ========================================================================== */
+
+@keyframes mural-sobe {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -50%;
+  }
+}
+
+.mural-viewport {
+  height: min(44rem, 80vh);
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+}
+
+/* No mural, cards fora da tela não pagam custo de estilo/layout no carregamento.
+   (Só no mural: num trilho horizontal isso bagunçaria a altura dos cards.) */
+.mural .card-depoimento {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 18rem;
+}
+
+/* No trilho do mobile todos os cards têm a mesma altura: textos longos
+   desvanecem no fim (o texto segue íntegro no HTML e no perfil do Google). */
+.card-trilho blockquote {
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black calc(100% - 2.5rem), transparent);
+}
+
+.mural-coluna {
+  animation: mural-sobe var(--mural-dur, 90s) linear infinite;
+}
+.mural:hover .mural-coluna,
+.mural:focus-within .mural-coluna {
+  animation-play-state: paused;
+}
+
+/* ============================================================================
+   FAQ nativo (<details>) — chevron gira, sem JS
+   ========================================================================== */
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item .faq-seta {
+  transition: rotate 0.2s var(--ease-arco);
+}
+.faq-item[open] .faq-seta {
+  rotate: 45deg;
+}
+
+/* ============================================================================
+   Acessibilidade de movimento: reduce desliga TUDO
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .arco-desenha {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  html[data-anima] [data-reveal] {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
+  .mural-coluna {
+    animation: none;
+  }
+  .mural-copia {
+    display: none;
+  }
+  .mural-viewport {
+    height: auto;
+    overflow: visible;
+    mask-image: none;
+  }
+  .btn-brilho {
+    display: none;
+  }
+  .trilho {
+    scroll-behavior: auto;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
