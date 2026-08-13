@@ -18,7 +18,7 @@ import posterMobile from "../../../public/video/hero-mobile.jpg";
 export function Hero() {
   return (
     <header className="bg-graphite text-ice relative flex min-h-[92svh] overflow-hidden">
-      {/* Fundo · desktop */}
+      {/* Imagem de fundo (o LCP): 16:9 no desktop, 9:16 no celular */}
       <div className="absolute inset-0 hidden md:block" aria-hidden="true">
         <Image
           src={posterDesktop}
@@ -30,14 +30,7 @@ export function Hero() {
           className="object-cover object-[62%_35%]"
           placeholder="blur"
         />
-        <VideoFundo
-          src={asset("/video/hero-desktop.mp4")}
-          poster={asset("/video/hero-desktop.jpg")}
-          className="object-cover object-[62%_35%]"
-        />
       </div>
-
-      {/* Fundo · mobile */}
       <div className="absolute inset-0 md:hidden" aria-hidden="true">
         <Image
           src={posterMobile}
@@ -49,10 +42,15 @@ export function Hero() {
           className="object-cover object-[50%_22%]"
           placeholder="blur"
         />
+      </div>
+
+      {/* Vídeo por cima da imagem: um só, escolhido pela largura da tela */}
+      <div className="absolute inset-0" aria-hidden="true">
         <VideoFundo
-          src={asset("/video/hero-mobile.mp4")}
-          poster={asset("/video/hero-mobile.jpg")}
-          className="object-cover object-[50%_22%]"
+          desktop={asset("/video/hero-desktop.mp4")}
+          mobile={asset("/video/hero-mobile.mp4")}
+          posterDesktop={asset("/video/hero-desktop.jpg")}
+          posterMobile={asset("/video/hero-mobile.jpg")}
         />
       </div>
 

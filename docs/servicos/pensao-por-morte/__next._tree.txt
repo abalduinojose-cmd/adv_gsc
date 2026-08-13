@@ -1,4 +1,4 @@
-:HL["/adv_gsc/_next/static/chunks/3-4czzytdcw9q.css","style"]
+:HL["/adv_gsc/_next/static/chunks/1y07idrmap12k.css","style"]
 :HL["/adv_gsc/_next/static/media/5f402bd2d8eef81a-s.p.40bho2kviej2o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/adv_gsc/_next/static/media/fa0520225c6f3d07-s.p.33u8lzvd44aqk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"servicos","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"pensao-por-morte","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"2FzpWB3i8fU1G2u-xC2wg"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"servicos","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"pensao-por-morte","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"lLm7efHWGg8aqR3RMLLu4"}

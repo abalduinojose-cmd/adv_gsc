@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // build da prévia estática (JS já minificado, não é código nosso)
+    ".next-pages/**",
+    "docs/**",
   ]),
 ]);
 
